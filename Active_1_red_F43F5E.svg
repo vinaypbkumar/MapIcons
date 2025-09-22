@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="509" height="509" viewBox="0 0 509 509" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="gr" cx="50%" cy="50%" r="50%">
+      <stop offset="45%" stop-color="#FF3B30" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#FF3B30" stop-opacity="1"/>
+      <stop offset="75%" stop-color="#FF9B96" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FF9B96" stop-opacity="0.0"/>
+    </radialGradient>
+    <filter id="softBlurr" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="24" result="b"/>
+      <feComponentTransfer in="b">
+        <feFuncA type="table" tableValues="0 0.8"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- background transparent -->
+  <rect width="100%" height="100%" fill="none"/>
+
+  <!-- outer glow using radial gradient and blur -->
+  <circle cx="254.5" cy="254.5" r="190" fill="url(#gr)" filter="url(#softBlurr)"/>
+
+  <!-- main outer circle -->
+  <circle cx="254.5" cy="254.5" r="170" fill="#FF3B30" />
+
+  <!-- inner circle (slightly lighter) -->
+  <circle cx="254.5" cy="254.5" r="64" fill="#FF6B65" />
+
+</svg>
