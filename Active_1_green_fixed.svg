@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="64" height="64" viewBox="0 0 509 509" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g_green" cx="50%" cy="50%" r="50%">
+      <stop offset="45%" stop-color="#01B189" stop-opacity="1"/>
+      <stop offset="75%" stop-color="#01B189" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#01B189" stop-opacity="0.0"/>
+    </radialGradient>
+    <filter id="blur_green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="24" result="b"/>
+      <feComponentTransfer in="b"><feFuncA type="table" tableValues="0 0.8"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <circle cx="254.5" cy="254.5" r="190" fill="url(#g_green)" filter="url(#blur_green)"/>
+  <circle cx="254.5" cy="254.5" r="170" fill="#01B189" />
+  <circle cx="254.5" cy="254.5" r="64" fill="#40C5A7" />
+</svg>
